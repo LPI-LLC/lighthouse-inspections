@@ -1,493 +1,170 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lighthouse Property Inspections | Three Rivers MI Home Inspector</title>
 
+<meta name="description" content="Residential Home Inspections in Three Rivers and Southwest Michigan. WDO Inspections, Thermal Imaging, InterNACHI Certified Inspectors. Call (269) 718-5299">
 
-
-<title>Home Inspection Southwest Michigan | Lighthouse Property Inspections</title>
-
-
-
-<meta name="description" content="Professional residential home inspections in Southwest Michigan. InterNACHI certified inspectors. Call (269) 718-5299.">
-
-
-
-<link rel="canonical" href="https://www.lighthouse-inspections.com">
-
-
+<link rel="stylesheet" href="style.css">
 
 <style>
-
 body {
-
-    margin: 0;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: #333;
-
-    line-height: 1.6;
-
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.6;
+color: #1f2937;
 }
-
-
 
 header {
-
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-
-    url('https://images.unsplash.com/photo-1560518883-ce09059eeffa');
-
-    background-size: cover;
-
-    background-position: center;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 90px 20px;
-
+background: #0f172a;
+color: white;
+padding: 20px 0;
 }
 
-
+.container {
+width: 90%;
+max-width: 1100px;
+margin: auto;
+}
 
 .logo {
-
-    max-width: 220px;
-
-    margin-bottom: 15px;
-
+height: 70px;
 }
 
-
-
-header h1 {
-
-    font-size: 36px;
-
-    margin: 10px 0;
-
+.hero {
+background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('home-inspection.jpg');
+background-size: cover;
+background-position: center;
+color: white;
+padding: 100px 20px;
+text-align: center;
 }
 
-
-
-header p {
-
-    font-size: 20px;
-
-    margin-bottom: 25px;
-
+.hero h1 {
+font-size: 2.5rem;
+margin-bottom: 10px;
 }
-
-
 
 .btn {
-
-    background: #0a6cff;
-
-    color: white;
-
-    padding: 14px 28px;
-
-    text-decoration: none;
-
-    border-radius: 6px;
-
-    font-size: 18px;
-
-    display: inline-block;
-
+display: inline-block;
+background: #f59e0b;
+color: white;
+padding: 14px 26px;
+margin-top: 20px;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
 }
 
-
-
-section {
-
-    padding: 60px 20px;
-
-    max-width: 1100px;
-
-    margin: auto;
-
+.section {
+padding: 60px 0;
 }
-
-
 
 .services {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 30px;
-
-    text-align: center;
-
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
 }
-
-
 
 .card {
-
-    padding: 30px;
-
-    border-radius: 8px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-    background: white;
-
+background: white;
+padding: 25px;
+border-radius: 12px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+text-align: center;
 }
 
-
-
-.highlight {
-
-    background: #f5f8ff;
-
-    text-align: center;
-
+.card img {
+width: 100%;
+border-radius: 10px;
+margin-bottom: 15px;
 }
 
-
-
-.reviews {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 20px;
-
+.why {
+background: #f8fafc;
 }
 
-
-
-.review {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 8px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
+.contact {
+background: #0f172a;
+color: white;
+text-align: center;
 }
-
-
-
-form {
-
-    max-width: 500px;
-
-    margin: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-}
-
-
-
-input, textarea {
-
-    padding: 12px;
-
-    font-size: 16px;
-
-    border-radius: 6px;
-
-    border: 1px solid #ccc;
-
-}
-
-
-
-button {
-
-    padding: 14px;
-
-    font-size: 18px;
-
-    background: #0a6cff;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 6px;
-
-    cursor: pointer;
-
-}
-
-
 
 footer {
-
-    background: #111;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 40px 20px;
-
+text-align: center;
+padding: 20px;
+background: #020617;
+color: white;
 }
-
-
-
-.footer-logo {
-
-    max-width: 160px;
-
-    margin-bottom: 15px;
-
-}
-
 </style>
-
-
-
-<script type="application/ld+json">
-
-{
-
- "@context": "https://schema.org",
-
- "@type": "HomeAndConstructionBusiness",
-
- "name": "Lighthouse Property Inspections, LLC",
-
- "telephone": "+1-269-718-5299",
-
- "email": "Andrew@lighthouse-inspections.com",
-
- "address": {
-
-   "@type": "PostalAddress",
-
-   "addressLocality": "Three Rivers",
-
-   "addressRegion": "MI",
-
-   "addressCountry": "US"
-
- },
-
- "areaServed": "Southwest Michigan",
-
- "description": "Residential home inspections, WDO inspections, and thermal imaging services.",
-
- "url": "https://www.lighthouse-inspections.com"
-
-}
-
-</script>
-
-
-
 </head>
-
-
 
 <body>
 
-
-
 <header>
-
-<img src="logo.png" class="logo">
-
-<h1>Lighthouse Property Inspections, LLC</h1>
-
-<p>Guiding You Home With Confidence</p>
-
-<a href="tel:12697185299" class="btn">Call Now</a>
-
+<div class="container">
+<img src="logo.png" alt="Lighthouse Property Inspections" class="logo">
+</div>
 </header>
 
-
-
-<section>
-
-<h2>Trusted Home Inspections in Southwest Michigan</h2>
-
-<p>
-
-Lighthouse Property Inspections provides thorough, reliable residential home inspections
-
-for buyers, sellers, and homeowners. Our InterNACHI Certified Inspectors deliver detailed,
-
-easy-to-understand reports to help you make confident decisions.
-
-</p>
-
+<section class="hero">
+<h1>Guiding You Home With Confidence</h1>
+<p>Professional Residential Home Inspections in Three Rivers & Southwest Michigan</p>
+<a href="tel:12697185299" class="btn">Call (269) 718-5299</a>
 </section>
 
-
-
-<section class="highlight">
-
+<section class="section">
+<div class="container">
 <h2>Our Services</h2>
-
 <div class="services">
 
 <div class="card">
-
+<img src="inspection.jpg" alt="Residential Home Inspection">
 <h3>Residential Home Inspections</h3>
-
-<p>Complete structural and systems evaluation.</p>
-
+<p>Comprehensive inspections with detailed digital reports to help you make confident decisions.</p>
 </div>
 
-
-
 <div class="card">
-
+<img src="wdo.jpg" alt="WDO Inspection">
 <h3>WDO Inspections</h3>
-
-<p>Identification of wood destroying organisms and structural risks.</p>
-
+<p>Wood-destroying organism inspections to identify potential structural threats.</p>
 </div>
-
-
 
 <div class="card">
-
-<h3>Thermal Imaging Inspections</h3>
-
-<p>Infrared technology to detect hidden moisture and defects.</p>
-
+<img src="thermal.jpg" alt="Thermal Imaging Inspection">
+<h3>Thermal Imaging</h3>
+<p>Advanced infrared technology to detect hidden moisture, insulation gaps, and electrical issues.</p>
 </div>
 
 </div>
-
+</div>
 </section>
 
-
-
-<section>
-
-<h2>Why Choose Lighthouse?</h2>
-
+<section class="section why">
+<div class="container">
+<h2>Why Choose Lighthouse Property Inspections?</h2>
 <ul>
-
 <li>InterNACHI Certified Inspectors</li>
-
-<li>Serving all of Southwest Michigan</li>
-
-<li>Fast scheduling and report delivery</li>
-
-<li>Clear, honest communication</li>
-
-<li>Trusted by home buyers and real estate professionals</li>
-
+<li>Clear, detailed digital reports</li>
+<li>Serving Three Rivers and Southwest Michigan</li>
+<li>Client-focused, education-driven inspections</li>
 </ul>
-
-</section>
-
-
-
-<section class="highlight">
-
-<h2>Service Area</h2>
-
-<p>
-
-Serving Three Rivers, Sturgis, Constantine, Schoolcraft, Vicksburg,
-
-Kalamazoo, Portage, and surrounding Southwest Michigan communities.
-
-</p>
-
-</section>
-
-
-
-<section>
-
-<h2>Client Reviews</h2>
-
-<div class="reviews">
-
-<div class="review">★★★★★ Professional, thorough, and easy to work with. Highly recommended.</div>
-
-<div class="review">★★★★★ Detailed report and great communication throughout the process.</div>
-
-<div class="review">★★★★★ Helped us feel confident in our home purchase.</div>
-
 </div>
-
 </section>
 
-
-
-<section class="highlight">
-
+<section class="section contact">
+<div class="container">
 <h2>Schedule Your Inspection</h2>
-
-<form action="mailto:Andrew@lighthouse-inspections.com" method="post" enctype="text/plain">
-
-<input type="text" name="Name" placeholder="Your Name" required>
-
-<input type="email" name="Email" placeholder="Your Email" required>
-
-<input type="tel" name="Phone" placeholder="Phone Number">
-
-<textarea name="Message" rows="5" placeholder="Property address and details"></textarea>
-
-<button type="submit">Request Inspection</button>
-
-</form>
-
+<p>Phone: (269) 718-5299</p>
+<p>Email: Andrew@lighthouse-inspections.com</p>
+</div>
 </section>
-
-
-
-<section>
-
-<h2>Service Location</h2>
-
-<iframe
-
-src="https://maps.google.com/maps?q=Three%20Rivers%20Michigan&t=&z=11&ie=UTF8&iwloc=&output=embed"
-
-width="100%" height="350" style="border:0;" loading="lazy"></iframe>
-
-</section>
-
-
 
 <footer>
-
-<img src="logo.png" class="footer-logo">
-
-<h2>Lighthouse Property Inspections, LLC</h2>
-
-<p>Southwest Michigan Home Inspections</p>
-
-<p>(269) 718-5299<br>Andrew@lighthouse-inspections.com</p>
-
-<p>© 2026 Lighthouse Property Inspections, LLC</p>
-
+Lighthouse Property Inspections, LLC • Three Rivers, Michigan
 </footer>
 
-
-
 </body>
-
 </html>
