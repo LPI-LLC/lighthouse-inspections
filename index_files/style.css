@@ -1,0 +1,81 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+background: #f4f6f8;
+color: #333;
+}
+
+header {
+background: #0c2d48;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+.logo {
+width: 120px;
+margin-bottom: 10px;
+}
+
+.slogan {
+font-style: italic;
+margin-top: -10px;
+}
+
+nav {
+margin-top: 15px;
+}
+
+nav a {
+color: white;
+margin: 0 15px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.hero {
+background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("home-inspection.jpg");
+color: white;
+text-align: center;
+padding: 80px 20px;
+}
+
+.cta {
+display: inline-block;
+background: #ffb400;
+color: black;
+padding: 12px 20px;
+margin-top: 15px;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+}
+
+section {
+padding: 40px 20px;
+max-width: 1000px;
+margin: auto;
+}
+
+.card {
+background: white;
+padding: 20px;
+margin: 20px 0;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+text-align: center;
+}
+
+.card img {
+width: 100%;
+border-radius: 6px;
+margin-bottom: 15px;
+}
+
+footer {
+background: #0c2d48;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
