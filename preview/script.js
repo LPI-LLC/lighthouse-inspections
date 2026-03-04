@@ -193,4 +193,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', highlightNav, { passive: true });
 
+  // --- Certification accordion ---
+  const certCategories = document.querySelectorAll('.cert-category');
+
+  certCategories.forEach(category => {
+    const header = category.querySelector('.cert-category-header');
+    const body = category.querySelector('.cert-category-body');
+
+    header.addEventListener('click', () => {
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+      // Close all other categories
+      certCategories.forEach(other => {
+        if (other !== category) {
+          const otherHeader = other.querySelector('.cert-category-header');
+          const otherBody = other.querySelector('.cert-category-body');
+          otherHeader.setAttribute('aria-expanded', 'false');
+          otherBody.style.maxHeight = null;
+        }
+      });
+
+      // Toggle this category
+      header.setAttribute('aria-expanded', String(!isExpanded));
+      if (!isExpanded) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+      } else {
+        body.style.maxHeight = null;
+      }
+    });
+
+    // Initialize: expand categories marked as expanded
+    if (header.getAttribute('aria-expanded') === 'true') {
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+
+  // --- Strategy Panel Toggle ---
+  const strategyToggle = document.getElementById('strategy-toggle');
+  const strategyPanel = document.getElementById('strategy-panel');
+  const strategyClose = document.getElementById('strategy-panel-close');
+
+  if (strategyToggle && strategyPanel) {
+    function togglePanel() {
+      const isOpen = strategyPanel.classList.toggle('open');
+      strategyToggle.classList.toggle('active');
+      const dot = strategyToggle.querySelector('.strategy-toggle-dot');
+      if (dot) dot.style.animation = 'none';
+    }
+
+    strategyToggle.addEventListener('click', togglePanel);
+    if (strategyClose) strategyClose.addEventListener('click', togglePanel);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && strategyPanel.classList.contains('open')) {
+        togglePanel();
+      }
+    });
+  }
+
 });

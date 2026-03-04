@@ -62,6 +62,23 @@
       margin-top: 12px;
       display: none;
     }
+    .remember {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      user-select: none;
+    }
+    .remember input {
+      width: auto;
+      margin: 0;
+      padding: 0;
+      accent-color: #D4A847;
+    }
     iframe {
       position: fixed;
       top: 0; left: 0;
@@ -77,6 +94,7 @@
     <p>Enter the password to view the redesign.</p>
     <form onsubmit="return checkPass()">
       <input type="password" id="pw" placeholder="Password" autofocus>
+      <label class="remember"><input type="checkbox" id="remember" checked> Remember me</label>
       <button type="submit">View Preview</button>
     </form>
     <p class="error" id="err">Wrong password. Try again.</p>
@@ -84,6 +102,9 @@
   <iframe id="frame"></iframe>
   <script>
     // Simple hash check — not cryptographic security, just a gate
+    var HASH = -452556480;
+    var STORAGE_KEY = 'lpi-preview-auth';
+
     function simpleHash(str) {
       let hash = 0;
       for (let i = 0; i < str.length; i++) {
@@ -92,19 +113,31 @@
       }
       return hash;
     }
+
+    function unlock() {
+      document.getElementById('gate').style.display = 'none';
+      var f = document.getElementById('frame');
+      f.style.display = 'block';
+      f.src = 'index-inner.html';
+    }
+
     function checkPass() {
       var pw = document.getElementById('pw').value;
-      // Password: homewrecker
-      if (simpleHash(pw) === -452556480) {
-        document.getElementById('gate').style.display = 'none';
-        var f = document.getElementById('frame');
-        f.style.display = 'block';
-        f.src = 'index-inner.html';
+      if (simpleHash(pw) === HASH) {
+        if (document.getElementById('remember').checked) {
+          try { localStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
+        }
+        unlock();
       } else {
         document.getElementById('err').style.display = 'block';
       }
       return false;
     }
+
+    // Auto-unlock if remembered
+    try {
+      if (localStorage.getItem(STORAGE_KEY) === '1') unlock();
+    } catch(e) {}
   </script>
 </body>
 </html>
