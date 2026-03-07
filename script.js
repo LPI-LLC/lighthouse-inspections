@@ -164,6 +164,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formData = new FormData(form);
 
+    // Write to Firestore (parallel, non-blocking)
+    if (window.db && !formData.get('_honey')) {
+      var leadData = {
+        name: formData.get('name') || '',
+        email: formData.get('email') || '',
+        phone: formData.get('phone') || '',
+        address: formData.get('address') || '',
+        service: formData.get('service') || '',
+        message: formData.get('message') || '',
+        source: location.pathname,
+        status: 'new',
+        submittedAt: firebase.firestore.FieldValue.serverTimestamp()
+      };
+      window.db.collection('leads').add(leadData).catch(function(err) {
+        console.warn('Firestore write failed:', err);
+      });
+    }
+
     fetch(form.action, {
       method: 'POST',
       body: formData,
@@ -255,28 +273,5 @@ document.addEventListener('DOMContentLoaded', () => {
       body.style.maxHeight = body.scrollHeight + 'px';
     }
   });
-
-  // --- Strategy Panel Toggle ---
-  const strategyToggle = document.getElementById('strategy-toggle');
-  const strategyPanel = document.getElementById('strategy-panel');
-  const strategyClose = document.getElementById('strategy-panel-close');
-
-  if (strategyToggle && strategyPanel) {
-    function togglePanel() {
-      const isOpen = strategyPanel.classList.toggle('open');
-      strategyToggle.classList.toggle('active');
-      const dot = strategyToggle.querySelector('.strategy-toggle-dot');
-      if (dot) dot.style.animation = 'none';
-    }
-
-    strategyToggle.addEventListener('click', togglePanel);
-    if (strategyClose) strategyClose.addEventListener('click', togglePanel);
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && strategyPanel.classList.contains('open')) {
-        togglePanel();
-      }
-    });
-  }
 
 });

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Lighthouse Property Inspections</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- Login View -->
+  <div id="login-view">
+    <div class="login-card">
+      <div class="login-logo">
+        <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg" width="60" height="72">
+          <circle cx="40" cy="50" r="26" fill="#E8922A"/>
+          <path d="M45,17 L60,9 L47,22" fill="#F5B840" opacity="0.85"/>
+          <path d="M35,17 L20,9 L33,22" fill="#F5B840" opacity="0.85"/>
+          <path d="M44,14 L52,5 L46,18" fill="#F5B840" opacity="0.6"/>
+          <path d="M36,14 L28,5 L34,18" fill="#F5B840" opacity="0.6"/>
+          <path d="M36,24 L34,68 H46 L44,24 Z" fill="#1A1A1A"/>
+          <rect x="35" y="17" width="10" height="7" rx="1" fill="#FFFDE8" stroke="#1A1A1A" stroke-width="1"/>
+          <path d="M34.5,17 L40,11 L45.5,17 Z" fill="#1A1A1A"/>
+          <line x1="40" y1="11" x2="40" y2="7" stroke="#1A1A1A" stroke-width="1.5"/>
+          <circle cx="40" cy="6" r="1.2" fill="#1A1A1A"/>
+          <rect x="32" y="23.5" width="16" height="2" rx="0.5" fill="#1A1A1A"/>
+          <rect x="38" y="28" width="4" height="4.5" rx="0.5" fill="#F5C542"/>
+          <rect x="37.5" y="38" width="5" height="5" rx="0.5" fill="#F5C542"/>
+          <rect x="37" y="49" width="6" height="5.5" rx="0.5" fill="#F5C542"/>
+          <path d="M32,68 H48 L51,72 H29 Z" fill="#1A1A1A"/>
+          <path d="M26,72 H54 L57,76 H23 Z" fill="#1A1A1A"/>
+          <path d="M18,76 Q24,74 30,76 Q36,74.5 40,76 Q44,74.5 50,76 Q56,74 62,76 L60,78 H20 Z" fill="#2C3E5A"/>
+        </svg>
+      </div>
+      <h2>Admin Dashboard</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required autocomplete="email">
+        <input type="password" id="login-password" placeholder="Password" required autocomplete="current-password">
+        <button type="submit" id="login-btn">Sign In</button>
+        <p id="login-error"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard View -->
+  <div id="dashboard-view" style="display:none">
+    <header class="admin-header">
+      <div class="admin-header-left">
+        <a href="index.html" class="admin-back">&larr; Site</a>
+        <h1>LIGHTHOUSE <span>Dashboard</span></h1>
+      </div>
+      <div class="admin-header-right">
+        <span id="admin-user"></span>
+        <button id="logout-btn">Sign Out</button>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="admin-tabs">
+      <button class="tab active" data-tab="leads">Leads</button>
+      <button class="tab" data-tab="analytics">Analytics</button>
+      <button class="tab" data-tab="strategy">Strategy</button>
+    </nav>
+
+    <!-- Leads Tab -->
+    <section id="tab-leads" class="tab-content active">
+      <div class="leads-controls">
+        <input type="text" id="leads-search" placeholder="Search leads...">
+        <select id="leads-filter-status">
+          <option value="">All Statuses</option>
+          <option value="new">New</option>
+          <option value="contacted">Contacted</option>
+          <option value="scheduled">Scheduled</option>
+          <option value="completed">Completed</option>
+        </select>
+        <select id="leads-filter-service">
+          <option value="">All Services</option>
+          <option value="Residential Home Inspection">Residential</option>
+          <option value="WDO Inspection">WDO</option>
+          <option value="Thermal Imaging">Thermal Imaging</option>
+          <option value="Chimney, Deck & Roof">Chimney/Deck/Roof</option>
+          <option value="Plumbing, Electrical & HVAC">Plumbing/Electrical/HVAC</option>
+          <option value="Multiple / Combo Inspection">Multiple/Combo</option>
+        </select>
+        <button id="leads-export" class="btn-small">Export CSV</button>
+      </div>
+
+      <div class="leads-summary">
+        <div class="summary-card new"><span id="count-new">0</span><label>New</label></div>
+        <div class="summary-card contacted"><span id="count-contacted">0</span><label>Contacted</label></div>
+        <div class="summary-card scheduled"><span id="count-scheduled">0</span><label>Scheduled</label></div>
+        <div class="summary-card completed"><span id="count-completed">0</span><label>Completed</label></div>
+      </div>
+
+      <div class="table-wrap">
+        <table id="leads-table">
+          <thead>
+            <tr>
+              <th data-sort="submittedAt">Date</th>
+              <th data-sort="name">Name</th>
+              <th data-sort="email">Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th data-sort="service">Service</th>
+              <th>Message</th>
+              <th data-sort="source">Source</th>
+              <th data-sort="status">Status</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody"></tbody>
+        </table>
+      </div>
+      <p id="leads-empty" style="display:none" class="empty-msg">No leads found.</p>
+    </section>
+
+    <!-- Analytics Tab -->
+    <section id="tab-analytics" class="tab-content">
+      <div class="analytics-grid">
+        <div class="analytics-card">
+          <h3>Leads This Month</h3>
+          <span id="metric-month-leads" class="metric-value">--</span>
+        </div>
+        <div class="analytics-card">
+          <h3>Leads This Week</h3>
+          <span id="metric-week-leads" class="metric-value">--</span>
+        </div>
+        <div class="analytics-card">
+          <h3>Top Service</h3>
+          <span id="metric-top-service" class="metric-value">--</span>
+        </div>
+        <div class="analytics-card">
+          <h3>Top Source Page</h3>
+          <span id="metric-top-source" class="metric-value">--</span>
+        </div>
+        <div class="analytics-card">
+          <h3>Total Leads</h3>
+          <span id="metric-total" class="metric-value">--</span>
+        </div>
+        <div class="analytics-card">
+          <h3>Conversion Rate</h3>
+          <span id="metric-conversion" class="metric-value">--</span>
+        </div>
+      </div>
+      <div class="analytics-link">
+        <p>For full traffic analytics, visit your <a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics dashboard</a>.</p>
+      </div>
+    </section>
+
+    <!-- Strategy Tab -->
+    <section id="tab-strategy" class="tab-content">
+      <div class="strategy-body">
+
+        <!-- 01 Market Research -->
+        <div class="strategy-section">
+          <h4><span class="strategy-section-num">01</span> Market Research</h4>
+          <p>We mapped every city, village, and township across your three core counties and three neighboring counties &mdash; analyzing populations, real estate activity, and existing home inspection competition for each.</p>
+          <div class="strategy-counties">
+            <div class="strategy-county">
+              <div class="strategy-county-label core">Core</div>
+              <div class="strategy-county-name">Kalamazoo County</div>
+              <div class="strategy-county-pop">pop. 261,670</div>
+            </div>
+            <div class="strategy-county">
+              <div class="strategy-county-label core">Core</div>
+              <div class="strategy-county-name">St. Joseph County</div>
+              <div class="strategy-county-pop">pop. 60,939</div>
+            </div>
+            <div class="strategy-county">
+              <div class="strategy-county-label core">Core</div>
+              <div class="strategy-county-name">Cass County</div>
+              <div class="strategy-county-pop">pop. 51,589</div>
+            </div>
+            <div class="strategy-county">
+              <div class="strategy-county-label extended">Extended</div>
+              <div class="strategy-county-name">Branch County</div>
+              <div class="strategy-county-pop">pop. 44,862</div>
+            </div>
+            <div class="strategy-county">
+              <div class="strategy-county-label extended">Extended</div>
+              <div class="strategy-county-name">Van Buren County</div>
+              <div class="strategy-county-pop">pop. 75,587</div>
+            </div>
+            <div class="strategy-county">
+              <div class="strategy-county-label extended">Extended</div>
+              <div class="strategy-county-name">Berrien County</div>
+              <div class="strategy-county-pop">pop. 154,316</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 SEO Strategy -->
+        <div class="strategy-section">
+          <h4><span class="strategy-section-num">02</span> SEO Strategy</h4>
+          <p>Dedicated landing pages for each target town, optimized for search queries like <strong>&ldquo;home inspection Sturgis MI&rdquo;</strong> or <strong>&ldquo;Three Rivers home inspector.&rdquo;</strong> Each page gets unique content about that community, its housing stock, and why Lighthouse is the local choice.</p>
+          <div class="strategy-callout">
+            <strong>Built on earlier work.</strong> ChatGPT drafts for city pages (Three Rivers, Sturgis, Kalamazoo, Portage, Vicksburg) were expanded with a data-driven approach prioritizing highest-impact towns first.
+          </div>
+          <p>URL pattern: <code>lighthouse-inspections.com/service-areas/[city]-home-inspection</code></p>
+        </div>
+
+        <!-- 03 Target Towns -->
+        <div class="strategy-section">
+          <h4><span class="strategy-section-num">03</span> Target Towns</h4>
+
+          <div class="strategy-tier">
+            <div class="strategy-tier-header">
+              <span class="tier-badge tier-1">Tier 1</span>
+              <span class="tier-label">Build First &mdash; 9 pages</span>
+              <span class="tier-status done">Complete</span>
+            </div>
+            <table class="strategy-tier-table">
+              <thead><tr><th>Town</th><th>Pop.</th><th>County</th></tr></thead>
+              <tbody>
+                <tr><td>Three Rivers</td><td>7,955</td><td>St. Joseph</td></tr>
+                <tr><td>Sturgis</td><td>10,974</td><td>St. Joseph</td></tr>
+                <tr><td>Kalamazoo</td><td>73,190</td><td>Kalamazoo</td></tr>
+                <tr><td>Portage</td><td>50,493</td><td>Kalamazoo</td></tr>
+                <tr><td>Coldwater</td><td>13,822</td><td>Branch</td></tr>
+                <tr><td>Niles</td><td>11,988</td><td>Berrien</td></tr>
+                <tr><td>Dowagiac</td><td>5,721</td><td>Cass</td></tr>
+                <tr><td>Centreville</td><td>1,319</td><td>St. Joseph</td></tr>
+                <tr><td>Constantine</td><td>1,947</td><td>St. Joseph</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="strategy-tier">
+            <div class="strategy-tier-header">
+              <span class="tier-badge tier-2">Tier 2</span>
+              <span class="tier-label">High Value &mdash; 11 pages</span>
+            </div>
+            <table class="strategy-tier-table">
+              <thead><tr><th>Town</th><th>Pop.</th><th>County</th></tr></thead>
+              <tbody>
+                <tr><td>Vicksburg</td><td>4,047</td><td>Kalamazoo</td></tr>
+                <tr><td>Oshtemo</td><td>24,101</td><td>Kalamazoo</td></tr>
+                <tr><td>Paw Paw</td><td>3,362</td><td>Van Buren</td></tr>
+                <tr><td>Bronson</td><td>2,307</td><td>Branch</td></tr>
+                <tr><td>White Pigeon</td><td>1,718</td><td>St. Joseph</td></tr>
+                <tr><td>Cassopolis</td><td>1,712</td><td>Cass</td></tr>
+                <tr><td>Schoolcraft</td><td>1,439</td><td>Kalamazoo</td></tr>
+                <tr><td>Edwardsburg</td><td>1,304</td><td>Cass</td></tr>
+                <tr><td>Colon</td><td>1,199</td><td>St. Joseph</td></tr>
+                <tr><td>Marcellus</td><td>1,074</td><td>Cass</td></tr>
+                <tr><td>Mendon</td><td>881</td><td>St. Joseph</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="strategy-tier">
+            <div class="strategy-tier-header">
+              <span class="tier-badge tier-3">Tier 3</span>
+              <span class="tier-label">Extended Reach &mdash; 14 pages</span>
+            </div>
+            <table class="strategy-tier-table">
+              <thead><tr><th>Town</th><th>Pop.</th><th>County</th></tr></thead>
+              <tbody>
+                <tr><td>Texas Township</td><td>19,741</td><td>Kalamazoo</td></tr>
+                <tr><td>Comstock</td><td>16,271</td><td>Kalamazoo</td></tr>
+                <tr><td>South Haven</td><td>3,964</td><td>Van Buren</td></tr>
+                <tr><td>Buchanan</td><td>4,400</td><td>Berrien</td></tr>
+                <tr><td>Hartford</td><td>2,515</td><td>Van Buren</td></tr>
+                <tr><td>Galesburg</td><td>2,096</td><td>Kalamazoo</td></tr>
+                <tr><td>Mattawan</td><td>2,550</td><td>Van Buren</td></tr>
+                <tr><td>Lawton</td><td>2,056</td><td>Van Buren</td></tr>
+                <tr><td>Parchment</td><td>1,887</td><td>Kalamazoo</td></tr>
+                <tr><td>Decatur</td><td>1,693</td><td>Van Buren</td></tr>
+                <tr><td>Quincy</td><td>1,652</td><td>Branch</td></tr>
+                <tr><td>Union City</td><td>1,605</td><td>Branch</td></tr>
+                <tr><td>Burr Oak</td><td>774</td><td>St. Joseph</td></tr>
+                <tr><td>Nottawa</td><td>3,787</td><td>St. Joseph</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 04 Competitive Landscape -->
+        <div class="strategy-section">
+          <h4><span class="strategy-section-num">04</span> Competitive Landscape</h4>
+          <div class="strategy-insights">
+            <div class="strategy-insight">
+              <div class="strategy-insight-title">Small Towns = Wide Open</div>
+              <p>Towns like Centreville, Constantine, Colon, Dowagiac, Cassopolis, and Edwardsburg have <strong class="text-green">near-zero SEO competition</strong> for home inspection searches. A single well-optimized page can rank on page 1 quickly.</p>
+            </div>
+            <div class="strategy-insight">
+              <div class="strategy-insight-title">Kalamazoo = Volume Play</div>
+              <p>The Kalamazoo-Portage metro has 9+ competing inspectors doing SEO. But search volume is significantly higher. Strategy: <strong class="text-gold">win the small towns first</strong> to build domain authority, then compete in Kalamazoo from a stronger position.</p>
+            </div>
+            <div class="strategy-insight">
+              <div class="strategy-insight-title">US-131 Corridor</div>
+              <p>Three Rivers &rarr; Schoolcraft &rarr; Vicksburg &rarr; Kalamazoo/Portage. This highway is your natural service line and should be a marketing emphasis.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 Roadmap -->
+        <div class="strategy-section">
+          <h4><span class="strategy-section-num">05</span> Roadmap</h4>
+          <div class="strategy-roadmap">
+            <div class="strategy-roadmap-group">
+              <div class="strategy-roadmap-group-label done">Completed</div>
+              <div class="strategy-roadmap-item done">Full site redesign</div>
+              <div class="strategy-roadmap-item done">Market research across 6 counties</div>
+              <div class="strategy-roadmap-item done">Competitive analysis</div>
+              <div class="strategy-roadmap-item done">Town prioritization &amp; tiering</div>
+              <div class="strategy-roadmap-item done">Component system &amp; code cleanup</div>
+              <div class="strategy-roadmap-item done">Build Tier 1 city landing pages (9 pages)</div>
+              <div class="strategy-roadmap-item done">Admin dashboard &amp; lead tracking</div>
+            </div>
+            <div class="strategy-roadmap-group">
+              <div class="strategy-roadmap-group-label next">Next Steps</div>
+              <div class="strategy-roadmap-item upcoming">Build Tier 2 city landing pages (11 pages)</div>
+              <div class="strategy-roadmap-item upcoming">Build Tier 3 city landing pages (14 pages)</div>
+              <div class="strategy-roadmap-item upcoming">Google Business Profile optimization</div>
+              <div class="strategy-roadmap-item upcoming">Google Search Console setup</div>
+              <div class="strategy-roadmap-item upcoming">Sitemap &amp; structured data</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

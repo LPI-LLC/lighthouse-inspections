@@ -100,8 +100,22 @@
   var bannerDismissed = false;
   try { bannerDismissed = localStorage.getItem('lpi-storm-banner-dismissed') === '1'; } catch (e) {}
 
+  // --- Google Analytics 4 ---
+  function injectAnalytics() {
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
+    var GA_ID = 'G-P9LJK60RJQ';
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    var i = document.createElement('script');
+    i.textContent = "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','" + GA_ID + "');";
+    document.head.appendChild(i);
+  }
+
   // --- Inject components on DOMContentLoaded ---
   document.addEventListener('DOMContentLoaded', function () {
+    injectAnalytics();
     injectNav();
     injectStormBanner();
     injectServices();
@@ -328,7 +342,7 @@
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +
-            '<p>&copy; 2026 Lighthouse Property Inspections, LLC. All rights reserved.</p>' +
+            '<p>&copy; 2026 Lighthouse Property Inspections, LLC. All rights reserved. <a href="' + (isHome ? 'admin.html' : '../admin.html') + '" class="admin-link">Admin</a></p>' +
             '<p class="footer-inter">InterNACHI&reg; Certified Professional Inspector</p>' +
           '</div>' +
         '</div>' +
