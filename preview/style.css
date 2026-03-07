@@ -479,7 +479,7 @@ section {
    SERVICES
    ========================================= */
 #services {
-  background: var(--navy-900);
+  background: var(--white);
   position: relative;
 }
 
@@ -490,7 +490,19 @@ section {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.3), transparent);
+}
+
+#services .section-label {
+  color: var(--gold-600);
+}
+
+#services .section-header h2 {
+  color: var(--navy-900);
+}
+
+#services .section-desc {
+  color: var(--gray-500);
 }
 
 .services-grid {
@@ -500,8 +512,8 @@ section {
 }
 
 .service-card {
-  background: rgba(27, 42, 74, 0.5);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-lg);
   padding: 36px 28px;
   transition: var(--transition);
@@ -522,10 +534,10 @@ section {
 }
 
 .service-card:hover {
-  background: rgba(27, 42, 74, 0.8);
-  border-color: rgba(212, 168, 71, 0.2);
+  background: var(--white);
+  border-color: rgba(212, 168, 71, 0.4);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
 .service-card:hover::before {
@@ -538,10 +550,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(212, 168, 71, 0.1);
+  background: rgba(212, 168, 71, 0.12);
   border-radius: var(--radius-md);
   margin-bottom: 20px;
-  color: var(--gold-500);
+  color: var(--gold-600);
 }
 
 .service-icon svg {
@@ -555,11 +567,12 @@ section {
   font-weight: 700;
   letter-spacing: 0.01em;
   margin-bottom: 10px;
+  color: var(--navy-900);
 }
 
 .service-card p {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--gray-600);
   line-height: 1.6;
 }
 
@@ -567,9 +580,7 @@ section {
    WHY US
    ========================================= */
 #why-us {
-  background:
-    radial-gradient(ellipse at 80% 50%, rgba(27, 42, 74, 0.6) 0%, transparent 60%),
-    var(--navy-800);
+  background: var(--navy-800);
 }
 
 .why-grid {
@@ -604,7 +615,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(212, 168, 71, 0.12);
+  background: rgba(212, 168, 71, 0.1);
   border-radius: var(--radius-sm);
   color: var(--gold-500);
 }
@@ -618,7 +629,7 @@ section {
 
 .why-feature p {
   font-size: 0.88rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 0;
 }
 
@@ -629,7 +640,7 @@ section {
 }
 
 .stat-card {
-  background: rgba(13, 27, 42, 0.6);
+  background: rgba(27, 42, 74, 0.5);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-xl);
   padding: 48px 40px;
@@ -686,7 +697,7 @@ section {
    CERTIFICATIONS
    ========================================= */
 #certifications {
-  background: var(--navy-900);
+  background: var(--white);
   position: relative;
 }
 
@@ -697,7 +708,19 @@ section {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.3), transparent);
+}
+
+#certifications .section-label {
+  color: var(--gold-600);
+}
+
+#certifications .section-header h2 {
+  color: var(--navy-900);
+}
+
+#certifications .section-desc {
+  color: var(--gray-500);
 }
 
 /* Primary badges (InterNACHI, CPI, Honor Guarantee) */
@@ -714,13 +737,13 @@ section {
   height: 120px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
   transition: var(--transition);
 }
 
 .cert-badge-primary:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 6px 20px rgba(212, 168, 71, 0.2));
+  filter: drop-shadow(0 6px 20px rgba(212, 168, 71, 0.15));
 }
 
 /* Accordion container */
@@ -732,15 +755,15 @@ section {
 
 /* Category wrapper */
 .cert-category {
-  background: rgba(27, 42, 74, 0.3);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: var(--transition);
 }
 
 .cert-category:hover {
-  border-color: rgba(255,255,255,0.1);
+  border-color: rgba(212, 168, 71, 0.3);
 }
 
 /* Category header button */
@@ -758,11 +781,11 @@ section {
 }
 
 .cert-category-header[aria-expanded="true"] {
-  border-bottom-color: rgba(255,255,255,0.05);
+  border-bottom-color: var(--gray-200);
 }
 
 .cert-category-header:hover {
-  background: rgba(27, 42, 74, 0.3);
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .cert-category-info {
@@ -775,7 +798,7 @@ section {
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy-900);
   margin: 0;
 }
 
@@ -793,7 +816,7 @@ section {
 
 /* Chevron rotation */
 .cert-chevron {
-  color: var(--text-muted);
+  color: var(--gray-400);
   transition: transform 0.3s ease, color 0.3s ease;
   flex-shrink: 0;
 }
@@ -828,23 +851,24 @@ section {
   align-items: flex-start;
   gap: 16px;
   padding: 16px;
-  background: rgba(27, 42, 74, 0.4);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-sm);
   transition: var(--transition);
 }
 
 .cert-card:hover {
-  background: rgba(27, 42, 74, 0.7);
-  border-color: rgba(212, 168, 71, 0.2);
+  background: var(--white);
+  border-color: rgba(212, 168, 71, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .cert-card-badge {
   height: 64px;
   width: 64px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
   flex-shrink: 0;
 }
 
@@ -859,7 +883,7 @@ section {
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy-900);
   margin: 0;
   line-height: 1.3;
 }
@@ -869,7 +893,7 @@ section {
   font-size: 0.82rem;
   font-weight: 400;
   font-style: italic;
-  color: var(--gold-400);
+  color: var(--gold-600);
   margin: 0;
   line-height: 1.4;
 }
@@ -878,7 +902,7 @@ section {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: var(--gray-600);
   margin: 4px 0 0;
   line-height: 1.5;
 }
@@ -887,9 +911,7 @@ section {
    SERVICE AREA
    ========================================= */
 #service-area {
-  background:
-    radial-gradient(ellipse at 20% 80%, rgba(27, 42, 74, 0.5) 0%, transparent 50%),
-    var(--navy-800);
+  background: var(--navy-800);
 }
 
 .area-grid {
@@ -915,15 +937,15 @@ section {
   align-items: flex-start;
   gap: 16px;
   padding: 20px;
-  background: rgba(13, 27, 42, 0.5);
+  background: rgba(27, 42, 74, 0.4);
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: var(--radius-md);
   transition: var(--transition);
 }
 
 .county-card:hover {
-  border-color: rgba(212, 168, 71, 0.2);
-  background: rgba(13, 27, 42, 0.7);
+  border-color: rgba(212, 168, 71, 0.3);
+  background: rgba(27, 42, 74, 0.6);
 }
 
 .county-card svg {
@@ -954,8 +976,9 @@ section {
   width: 100%;
   height: 420px;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.08);
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 /* Leaflet overrides to match site theme */
@@ -1059,10 +1082,10 @@ section {
   flex: 1;
   max-width: 260px;
   padding: 10px 14px;
-  background: rgba(27, 42, 74, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(13, 27, 42, 0.6);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-sm);
-  color: var(--text-primary);
+  color: var(--white);
   font-family: var(--font-body);
   font-size: 0.85rem;
   cursor: pointer;
@@ -1079,15 +1102,15 @@ section {
 }
 
 .city-picker select option {
-  background: #1B2A4A;
-  color: #fff;
+  background: var(--navy-800);
+  color: var(--white);
 }
 
 /* =========================================
    CONTACT
    ========================================= */
 #contact {
-  background: var(--navy-900);
+  background: var(--white);
   position: relative;
 }
 
@@ -1098,7 +1121,15 @@ section {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.3), transparent);
+}
+
+#contact .section-label {
+  color: var(--gold-600);
+}
+
+#contact .contact-info h2 {
+  color: var(--navy-900);
 }
 
 .contact-grid {
@@ -1109,7 +1140,7 @@ section {
 }
 
 .contact-info p {
-  color: var(--text-secondary);
+  color: var(--gray-600);
   margin-bottom: 32px;
 }
 
@@ -1124,15 +1155,16 @@ section {
   align-items: center;
   gap: 16px;
   padding: 16px 20px;
-  background: rgba(27, 42, 74, 0.4);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-md);
   transition: var(--transition);
 }
 
 a.contact-method:hover {
-  border-color: rgba(212, 168, 71, 0.3);
-  background: rgba(27, 42, 74, 0.6);
+  border-color: rgba(212, 168, 71, 0.4);
+  background: var(--white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
 }
 
 .contact-method-icon {
@@ -1142,9 +1174,9 @@ a.contact-method:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(212, 168, 71, 0.1);
+  background: rgba(212, 168, 71, 0.12);
   border-radius: var(--radius-sm);
-  color: var(--gold-500);
+  color: var(--gold-600);
 }
 
 .contact-method-label {
@@ -1152,7 +1184,7 @@ a.contact-method:hover {
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--gray-500);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -1162,7 +1194,7 @@ a.contact-method:hover {
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy-900);
 }
 
 /* Contact Form */
@@ -1171,8 +1203,8 @@ a.contact-method:hover {
 }
 
 .contact-form {
-  background: rgba(27, 42, 74, 0.5);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
   border-radius: var(--radius-xl);
   padding: 40px;
 }
@@ -1182,6 +1214,7 @@ a.contact-method:hover {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 28px;
+  color: var(--navy-900);
 }
 
 .form-group {
@@ -1193,7 +1226,7 @@ a.contact-method:hover {
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--gray-600);
   margin-bottom: 6px;
   letter-spacing: 0.02em;
 }
@@ -1203,10 +1236,10 @@ a.contact-method:hover {
 .form-group textarea {
   width: 100%;
   padding: 12px 16px;
-  background: rgba(13, 27, 42, 0.6);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: var(--white);
+  border: 1px solid var(--gray-300);
   border-radius: var(--radius-sm);
-  color: var(--white);
+  color: var(--navy-900);
   font-family: var(--font-body);
   font-size: 0.92rem;
   transition: var(--transition);
@@ -1215,7 +1248,7 @@ a.contact-method:hover {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-muted);
+  color: var(--gray-400);
 }
 
 .form-group input:focus,
@@ -1227,15 +1260,15 @@ a.contact-method:hover {
 
 .form-group select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%239CA3AF' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23B8912E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 40px;
 }
 
 .form-group select option {
-  background: var(--navy-800);
-  color: var(--white);
+  background: var(--white);
+  color: var(--navy-900);
 }
 
 .form-group textarea {
@@ -1253,7 +1286,7 @@ a.contact-method:hover {
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 300;
-  color: var(--text-muted);
+  color: var(--gray-500);
   text-align: center;
   margin-top: 12px;
 }
@@ -1357,6 +1390,254 @@ a.contact-method:hover {
 }
 
 /* =========================================
+   STORM BANNER
+   ========================================= */
+.storm-banner {
+  background: linear-gradient(135deg, #92400e, #78350f);
+  border-bottom: 2px solid var(--gold-500);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+}
+
+.storm-banner-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 48px 10px 24px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.storm-banner-link:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.storm-banner-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.storm-banner-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fef3c7;
+  line-height: 1.3;
+}
+
+.storm-banner-text strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.storm-banner-arrow {
+  color: var(--gold-400);
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.storm-banner-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(254,243,199,0.6);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.storm-banner-close:hover {
+  color: #fff;
+}
+
+.storm-banner.hidden {
+  display: none;
+}
+
+/* =========================================
+   STORM RESPONSE SECTION (Three Rivers only)
+   ========================================= */
+#storm-response {
+  background: linear-gradient(180deg, #451a03 0%, var(--navy-900) 100%);
+  padding: 80px 0;
+  position: relative;
+}
+
+#storm-response::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 168, 71, 0.2), transparent);
+}
+
+.storm-response-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.storm-response-header .section-label {
+  color: #fbbf24;
+}
+
+.storm-response-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.storm-response-header p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+
+.storm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.storm-offer {
+  background: rgba(27, 42, 74, 0.5);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+
+.storm-offer h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  margin-bottom: 16px;
+}
+
+.storm-offer p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.storm-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.storm-checklist li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.storm-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: rgba(251, 191, 36, 0.15);
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-500);
+}
+
+.storm-checklist li::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 9px;
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid var(--gold-500);
+  border-bottom: 2px solid var(--gold-500);
+  transform: rotate(-45deg);
+}
+
+.storm-resources {
+  background: rgba(27, 42, 74, 0.5);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+
+.storm-resources h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.storm-resource-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.storm-resource-item:last-child {
+  margin-bottom: 0;
+}
+
+.storm-resource-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 168, 71, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--gold-500);
+}
+
+.storm-resource-item h4 {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.storm-resource-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.storm-resource-item a {
+  color: var(--gold-400);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 168, 71, 0.3);
+}
+
+.storm-resource-item a:hover {
+  text-decoration-color: var(--gold-400);
+}
+
+/* =========================================
    ANIMATIONS
    ========================================= */
 [data-aos] {
@@ -1434,6 +1715,25 @@ a.contact-method:hover {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .storm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .storm-banner-link {
+    padding: 8px 36px 8px 16px;
+    gap: 8px;
+  }
+
+  .storm-banner-text {
+    font-size: 0.78rem;
+  }
+
+  .storm-banner-close {
+    top: 8px;
+    right: 6px;
+    transform: none;
   }
 
   .cert-primary {

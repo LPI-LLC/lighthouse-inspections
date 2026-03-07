@@ -45,6 +45,15 @@
     </div>
   </nav>
 
+  <!-- Storm Alert Banner -->
+  <div class="storm-banner" id="storm-banner">
+    <a href="#storm-response" class="storm-banner-link">
+      <span class="storm-banner-icon">&#9888;&#65039;</span>
+      <span class="storm-banner-text"><strong>Our hearts are with Three Rivers.</strong> Free post-storm assessments for affected neighbors. <span class="storm-banner-arrow">&rarr;</span></span>
+    </a>
+    <button class="storm-banner-close" aria-label="Dismiss banner" onclick="dismissStormBanner()">&times;</button>
+  </div>
+
   <!-- Hero -->
   <header id="hero">
     <div class="hero-overlay"></div>
@@ -63,6 +72,70 @@
     </div>
   </header>
 
+  <!-- Storm Response Section -->
+  <section id="storm-response">
+    <div class="container">
+      <div class="storm-response-header">
+        <p class="section-label">Community Response</p>
+        <h2>Standing With Our Community</h2>
+        <p>On March 6, tornadoes tore through Three Rivers and surrounding communities, damaging homes, uprooting trees, and leaving neighborhoods without power. As your neighbors, we're here to help however we can.</p>
+      </div>
+      <div class="storm-grid">
+        <div class="storm-offer">
+          <h3>Free Post-Storm Property Assessments</h3>
+          <p>If your home was affected by the storm, Lighthouse is offering complimentary property assessments to help you understand the condition of your home. Here's what we'll check:</p>
+          <ul class="storm-checklist">
+            <li>Structural integrity — foundation cracks, shifted walls, compromised framing</li>
+            <li>Roof and exterior damage — missing shingles, soffit and fascia damage, siding impact</li>
+            <li>Water intrusion — moisture from breached roofing, broken windows, or compromised seals</li>
+            <li>Electrical and mechanical systems — downed lines, damaged panels, HVAC displacement</li>
+            <li>Tree and debris impact — damage from fallen trees to structures, fencing, and utilities</li>
+          </ul>
+          <a href="tel:2697185299" class="btn btn-primary">Call (269) 718-5299 to Schedule</a>
+        </div>
+        <div class="storm-resources">
+          <h3>Local Resources</h3>
+          <div class="storm-resource-item">
+            <div class="storm-resource-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <h4>Red Cross Shelter</h4>
+              <p>Riverside Church, 207 E. Michigan Ave, Three Rivers. Open for displaced residents.</p>
+            </div>
+          </div>
+          <div class="storm-resource-item">
+            <div class="storm-resource-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Michigan 211</h4>
+              <p>Dial <a href="tel:211">211</a> to report unmet needs — shelter, food, or other assistance.</p>
+            </div>
+          </div>
+          <div class="storm-resource-item">
+            <div class="storm-resource-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4>State Emergency Operations</h4>
+              <p>Gov. Whitmer has activated the State Emergency Operations Center for Branch, Cass, and St. Joseph counties.</p>
+            </div>
+          </div>
+          <div class="storm-resource-item">
+            <div class="storm-resource-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <h4>Insurance Documentation</h4>
+              <p>Photograph all damage before cleanup. An independent inspection report can support your insurance claim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services -->
   <section id="services">
     <div class="container">
@@ -80,30 +153,6 @@
           </div>
           <h3>Residential Home Inspections</h3>
           <p>Comprehensive evaluation of structure, electrical, plumbing, roofing, and mechanical systems. We leave no stone unturned so you can buy with confidence.</p>
-        </div>
-        <div class="service-card" data-aos>
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="12" y="6" width="24" height="36" rx="2" stroke="currentColor" stroke-width="2.5"/>
-              <path d="M18 16H30M18 22H30M18 28H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="36" cy="36" r="8" stroke="currentColor" stroke-width="2.5"/>
-              <path d="M42 42L46 46" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>WDO Inspections</h3>
-          <p>Thorough inspection for wood-destroying organisms — identifying activity, damage, and conducive conditions that could compromise your property.</p>
-        </div>
-        <div class="service-card" data-aos>
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/>
-              <circle cx="24" cy="24" r="6" fill="currentColor" opacity="0.2"/>
-              <circle cx="24" cy="24" r="3" fill="currentColor"/>
-              <path d="M24 8V4M24 44V40M40 24H44M4 24H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Thermal Imaging</h3>
-          <p>Infrared technology that reveals hidden moisture intrusion, insulation deficiencies, and energy loss invisible to the naked eye.</p>
         </div>
         <div class="service-card" data-aos>
           <div class="service-icon">
@@ -132,6 +181,30 @@
         <div class="service-card" data-aos>
           <div class="service-icon">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="12" y="6" width="24" height="36" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M18 16H30M18 22H30M18 28H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="36" cy="36" r="8" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M42 42L46 46" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>WDO Inspections</h3>
+          <p>Thorough inspection for wood-destroying organisms — identifying activity, damage, and conducive conditions that could compromise your property.</p>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="24" cy="24" r="6" fill="currentColor" opacity="0.2"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+              <path d="M24 8V4M24 44V40M40 24H44M4 24H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Thermal Imaging</h3>
+          <p>Infrared technology that reveals hidden moisture intrusion, insulation deficiencies, and energy loss invisible to the naked eye.</p>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/>
               <path d="M6 18H42" stroke="currentColor" stroke-width="2"/>
               <path d="M14 26H26M14 32H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -142,6 +215,7 @@
           <p>Clear, thorough reporting with high-resolution photos, findings organized by system, and practical recommendations delivered digitally.</p>
         </div>
       </div>
+
     </div>
   </section>
 
