@@ -27,16 +27,6 @@ function dismissStormBanner() {
   }
 }
 
-// Auto-hide if previously dismissed
-(function() {
-  try {
-    if (localStorage.getItem('lpi-storm-banner-dismissed') === '1') {
-      var banner = document.getElementById('storm-banner');
-      if (banner) banner.classList.add('hidden');
-    }
-  } catch(e) {}
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- Navbar scroll effect ---

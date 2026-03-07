@@ -1,10 +1,27 @@
 <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <rect width="32" height="32" rx="6" fill="#0D1B2A"/>
-  <path d="M16 4L19 9H13L16 4Z" fill="#D4A847"/>
-  <rect x="13" y="9" width="6" height="3" fill="#FFFBE6"/>
-  <rect x="11.5" y="12" width="9" height="13" rx="1" fill="#1B2A4A" stroke="#2C3E5A" stroke-width="0.5"/>
-  <rect x="14" y="14.5" width="4" height="5" rx="0.5" fill="#D4A847"/>
-  <circle cx="16" cy="16.5" r="1.3" fill="#FFFBE6"/>
-  <path d="M9 25H23L24.5 27.5H7.5L9 25Z" fill="#1B2A4A"/>
-  <rect x="6.5" y="27" width="19" height="2" rx="0.5" fill="#2C3E5A"/>
+  <!-- Sunset circle -->
+  <circle cx="16" cy="18" r="9.5" fill="#E8922A"/>
+  <!-- Light rays -->
+  <path d="M18.2,8.5 L22,5.5 L19,10" fill="#F5B840" opacity="0.8"/>
+  <path d="M13.8,8.5 L10,5.5 L13,10" fill="#F5B840" opacity="0.8"/>
+  <!-- Tower -->
+  <path d="M14.5,11 L14,25 H18 L17.5,11 Z" fill="#1A1A1A"/>
+  <!-- Lantern room -->
+  <rect x="14" y="8.5" width="4" height="2.8" rx="0.5" fill="#FFFDE8" stroke="#1A1A1A" stroke-width="0.5"/>
+  <!-- Cupola -->
+  <path d="M13.8,8.5 L16,6 L18.2,8.5 Z" fill="#1A1A1A"/>
+  <!-- Finial -->
+  <line x1="16" y1="6" x2="16" y2="4.5" stroke="#1A1A1A" stroke-width="0.8"/>
+  <!-- Gallery -->
+  <rect x="13" y="11" width="6" height="1" rx="0.3" fill="#1A1A1A"/>
+  <!-- Windows -->
+  <rect x="15" y="13.5" width="2" height="2" rx="0.3" fill="#F5C542"/>
+  <rect x="14.8" y="17.5" width="2.4" height="2" rx="0.3" fill="#F5C542"/>
+  <!-- Base -->
+  <path d="M13,25 H19 L20.5,27 H11.5 Z" fill="#1A1A1A"/>
+  <path d="M10,27 Q13,26 16,27 Q19,26 22,27 L21,28 H11 Z" fill="#2C3E5A"/>
+  <!-- Birds -->
+  <path d="M7,14 Q8.2,12.8 9.4,14" stroke="#1A1A1A" stroke-width="0.6" fill="none" stroke-linecap="round"/>
+  <path d="M22,12 Q23.2,10.8 24.4,12" stroke="#1A1A1A" stroke-width="0.6" fill="none" stroke-linecap="round"/>
 </svg>

@@ -88,7 +88,7 @@
   }
 
   function pageUrl(city) {
-    return city.slug ? city.slug + '-home-inspection.html' : null;
+    return city.slug ? 'service-areas/' + city.slug + '-home-inspection.html' : null;
   }
 
   function createTooltipContent(city) {

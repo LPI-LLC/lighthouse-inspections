@@ -1316,6 +1316,29 @@ a.contact-method:hover {
   margin-top: 12px;
 }
 
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background: rgba(212, 168, 71, 0.15);
+  color: var(--gold-400);
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
