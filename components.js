@@ -144,12 +144,12 @@
             '<span></span><span></span><span></span>' +
           '</button>' +
           '<ul class="nav-links">' +
-            '<li><a href="' + linkPrefix + '#services">Services</a></li>' +
-            '<li><a href="' + linkPrefix + '#pricing">Pricing</a></li>' +
+            '<li><a href="' + linkPrefix + '#services">Services</a></li>' +            
             '<li><a href="' + linkPrefix + '#why-us">Why Us</a></li>' +
             '<li><a href="' + linkPrefix + '#certifications">Certifications</a></li>' +
             '<li><a href="' + linkPrefix + '#service-area">Service Area</a></li>' +
-           '<li><a href="' + linkPrefix + '#contact" class="nav-cta">Request Inspection</a></li>' +
+            '<li><a href="' + linkPrefix + '#pricing">Pricing</a></li>' +
+            '<li><a href="' + linkPrefix + '#contact" class="nav-cta">Request Inspection</a></li>' +
           '</ul>' +
         '</div>' +
       '</nav>';
