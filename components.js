@@ -284,6 +284,9 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
                     '<option value="residential">Residential Home Inspection</option>' +
                     '<option value="wdo">WDO Inspection</option>' +
                     '<option value="thermal">Thermal Imaging</option>' +
+            '<option value="radon">Radon Testing</option>' +
+            '<option value="repair-verification">Repair Verification Inspection</option>' +
+            '<option value="return-inspection">Return Inspection</option>' +
                     '<option value="chimney">Chimney, Deck &amp; Roof</option>' +
                     '<option value="plumbing">Plumbing, Electrical &amp; HVAC</option>' +
                     '<option value="combo">Multiple / Combo Inspection</option>' +
