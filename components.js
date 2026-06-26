@@ -90,6 +90,16 @@
       desc: 'Infrared technology that reveals hidden moisture intrusion, insulation deficiencies, and energy loss invisible to the naked eye.'
     },
     {
+svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="currentColor"/><path d="M24 20V10M27.5 26L36 31M20.5 26L12 31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M18 14C15 16 13 19 13 23M30 14C33 16 35 19 35 23M17 34C21 37 27 37 31 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+title: 'Radon Testing',
+desc: 'Professional 48-hour continuous radon testing with separate placement and retrieval appointments. Includes monitor placement, retrieval, data analysis, and a detailed digital report following applicable NRPP measurement protocols.'
+},
+{
+svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="8" width="28" height="34" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M18 8V6H30V8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M17 25L22 30L32 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 36H31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+title: 'Repair Verification & Return Inspections',
+desc: 'Focused verification of listed repairs, contractor repair lists, lender-required items, or systems that were unavailable during the original inspection. Includes photo documentation, a written report, and a lender letter.'
+},
+{
       svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M6 18H42" stroke="currentColor" stroke-width="2"/><path d="M14 26H26M14 32H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="30" y="24" width="6" height="6" rx="1" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/></svg>',
       title: 'Detailed Digital Reports',
       desc: 'Clear, thorough reporting with high-resolution photos, findings organized by system, and practical recommendations delivered digitally.'
