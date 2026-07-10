@@ -28,6 +28,16 @@ var LOGO_SVG = '<img src="' + LOGO_SRC + '" alt="Lighthouse Property Inspections
       desc: 'Comprehensive evaluation of structure, electrical, plumbing, roofing, and mechanical systems. We leave no stone unturned so you can buy with confidence.'
     },
     {
+      svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="32" width="32" height="10" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M14 32V14L24 8L34 14V32" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 24H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+      title: 'Chimney, Deck &amp; Roof',
+      desc: 'Specialized inspections of exterior structures &mdash; evaluating chimneys, decking, and roofing systems for safety, function, and general condition.'
+    },
+    {
+      svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6V12M24 36V42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M12 24H6M42 24H36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5"/><path d="M24 18V24L28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 10L14 14M34 34L38 38M38 10L34 14M14 34L10 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+      title: 'Plumbing, Electrical &amp; HVAC',
+      desc: "In-depth evaluation of your home's critical systems &mdash; water supply, drainage, wiring, panels, heating, and cooling. Safety and efficiency assessed."
+    },
+    {
       svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="24" height="36" rx="2" stroke="currentColor" stroke-width="2.5"/><path d="M18 16H30M18 22H30M18 28H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="36" cy="36" r="8" stroke="currentColor" stroke-width="2.5"/><path d="M42 42L46 46" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>',
       title: 'WDO Inspections',
       desc: 'Thorough inspection for wood-destroying organisms &mdash; identifying activity, damage, and conducive conditions that could compromise your property.'
@@ -228,16 +238,16 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
                 '<div class="form-group">' +
                   '<label for="service">Service Needed</label>' +
                   '<select id="service" name="service">' +
-                    <option value="">Select a service...</option>
-<option value="residential">Residential Home Inspection</option>
-<option value="wdo">WDO Inspection</option>
-<option value="thermal">Thermal Imaging</option>
-<option value="radon">Radon Testing</option>
-<option value="repair-verification">Repair Verification Inspection</option>
-<option value="return-inspection">Return Inspection</option>
-<option value="new-construction">New Construction Inspection</option>
-<option value="warranty">11th Month Warranty Inspection</option>
-<option value="combo">Multiple / Combo Inspection</option>
+                    '<option value="">Select a service...</option>' +
+                    '<option value="residential">Residential Home Inspection</option>' +
+                    '<option value="wdo">WDO Inspection</option>' +
+                    '<option value="thermal">Thermal Imaging</option>' +
+            '<option value="radon">Radon Testing</option>' +
+            '<option value="repair-verification">Repair Verification Inspection</option>' +
+            '<option value="return-inspection">Return Inspection</option>' +
+                    '<option value="chimney">Chimney, Deck &amp; Roof</option>' +
+                    '<option value="plumbing">Plumbing, Electrical &amp; HVAC</option>' +
+                    '<option value="combo">Multiple / Combo Inspection</option>' +
                   '</select>' +
                 '</div>' +
                 '<div class="form-group">' +
@@ -290,14 +300,11 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
             '</div>' +
             '<div class="footer-links">' +
               '<h4>Services</h4>' +
-                        <a href="' + linkPrefix + '#services">Residential Home Inspections</a>
-                        <a href="' + linkPrefix + '#services">WDO Inspections</a>
-                        <a href="' + linkPrefix + '#services">Thermal Imaging</a>
-                        <a href="' + linkPrefix + '#services">Radon Testing</a>
-                        <a href="' + linkPrefix + '#services">Repair Verification</a>
-                        <a href="' + linkPrefix + '#services">Return Inspections</a>
-                        <a href="' + linkPrefix + '#services">New Construction Inspections</a>
-                        <a href="' + linkPrefix + '#services">11th Month Warranty Inspections</a>
+              '<a href="' + linkPrefix + '#services">Residential Inspections</a>' +
+              '<a href="' + linkPrefix + '#services">WDO Inspections</a>' +
+              '<a href="' + linkPrefix + '#services">Thermal Imaging</a>' +
+              '<a href="' + linkPrefix + '#services">Chimney, Deck &amp; Roof</a>' +
+              '<a href="' + linkPrefix + '#services">Plumbing, Electrical &amp; HVAC</a>' +
             '</div>' +
             '<div class="footer-contact">' +
               '<h4>Contact</h4>' +
