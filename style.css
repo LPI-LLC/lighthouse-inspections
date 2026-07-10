@@ -2012,3 +2012,64 @@ grid-template-columns: 1fr;
 .testimonial-card {
     text-align: left;
 }
+
+/* Sample Reports Section */
+.sample-reports-section {
+    background: #f8fafc;
+    padding: 6rem 0;
+}
+
+.sample-report-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.sample-report-card {
+    background: #ffffff;
+    border: 1px solid rgba(27, 42, 74, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 18px 45px rgba(27, 42, 74, 0.08);
+}
+
+.sample-report-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: rgba(212, 168, 71, 0.12);
+    color: #D4A847;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+}
+
+.sample-report-icon svg {
+    width: 42px;
+    height: 42px;
+}
+
+.sample-report-card h3 {
+    color: #1B2A4A;
+    margin-bottom: 0.85rem;
+}
+
+.sample-report-card p {
+    color: #4b5563;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .sample-reports-section {
+        padding: 4rem 0;
+    }
+
+    .sample-report-grid {
+        grid-template-columns: 1fr;
+    }
+}
