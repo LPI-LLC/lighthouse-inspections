@@ -238,16 +238,16 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
                 '<div class="form-group">' +
                   '<label for="service">Service Needed</label>' +
                   '<select id="service" name="service">' +
-                    '<option value="">Select a service...</option>' +
-                    '<option value="residential">Residential Home Inspection</option>' +
-                    '<option value="wdo">WDO Inspection</option>' +
-                    '<option value="thermal">Thermal Imaging</option>' +
-            '<option value="radon">Radon Testing</option>' +
-            '<option value="repair-verification">Repair Verification Inspection</option>' +
-            '<option value="return-inspection">Return Inspection</option>' +
-                    '<option value="chimney">Chimney, Deck &amp; Roof</option>' +
-                    '<option value="plumbing">Plumbing, Electrical &amp; HVAC</option>' +
-                    '<option value="combo">Multiple / Combo Inspection</option>' +
+                    <option value="">Select a service...</option>
+<option value="residential">Residential Home Inspection</option>
+<option value="wdo">WDO Inspection</option>
+<option value="thermal">Thermal Imaging</option>
+<option value="radon">Radon Testing</option>
+<option value="repair-verification">Repair Verification Inspection</option>
+<option value="return-inspection">Return Inspection</option>
+<option value="new-construction">New Construction Inspection</option>
+<option value="warranty">11th Month Warranty Inspection</option>
+<option value="combo">Multiple / Combo Inspection</option>
                   '</select>' +
                 '</div>' +
                 '<div class="form-group">' +
