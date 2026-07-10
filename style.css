@@ -2087,3 +2087,12 @@ color: #4b5563;
 .sample-reports-section .section-label {
 color: #D4A847;
 }
+
+/* Navigation Logo Image */
+.logo .logo-image {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+}
