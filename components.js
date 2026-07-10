@@ -10,52 +10,10 @@
   var isHome = /\/(index\.html)?(\?.*)?(\#.*)?$/.test(location.pathname);
   var linkPrefix = isHome ? '' : '../index.html';
 
-  // --- SVG Logo (single source of truth) ---
-  var LOGO_SVG = '<svg class="logo-icon" viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-    // Sunset circle
-    '<circle cx="40" cy="50" r="26" fill="#E8922A"/>' +
-    // Light rays from lantern
-    '<path d="M45,17 L60,9 L47,22" fill="#F5B840" opacity="0.85"/>' +
-    '<path d="M35,17 L20,9 L33,22" fill="#F5B840" opacity="0.85"/>' +
-    '<path d="M44,14 L52,5 L46,18" fill="#F5B840" opacity="0.6"/>' +
-    '<path d="M36,14 L28,5 L34,18" fill="#F5B840" opacity="0.6"/>' +
-    // Lighthouse tower (tapered silhouette)
-    '<path d="M36,24 L34,68 H46 L44,24 Z" fill="#1A1A1A"/>' +
-    // Lantern room (lit glass)
-    '<rect x="35" y="17" width="10" height="7" rx="1" fill="#FFFDE8" stroke="#1A1A1A" stroke-width="1"/>' +
-    // Cupola roof
-    '<path d="M34.5,17 L40,11 L45.5,17 Z" fill="#1A1A1A"/>' +
-    // Finial at top
-    '<line x1="40" y1="11" x2="40" y2="7" stroke="#1A1A1A" stroke-width="1.5"/>' +
-    '<circle cx="40" cy="6" r="1.2" fill="#1A1A1A"/>' +
-    // Gallery walkway
-    '<rect x="32" y="23.5" width="16" height="2" rx="0.5" fill="#1A1A1A"/>' +
-    // Tower band details
-    '<rect x="35.5" y="34" width="9" height="1.2" fill="#2A2A2A"/>' +
-    '<rect x="35" y="46" width="10" height="1.2" fill="#2A2A2A"/>' +
-    '<rect x="34.5" y="58" width="11" height="1.2" fill="#2A2A2A"/>' +
-    // Lit windows
-    '<rect x="38" y="28" width="4" height="4.5" rx="0.5" fill="#F5C542"/>' +
-    '<rect x="37.5" y="38" width="5" height="5" rx="0.5" fill="#F5C542"/>' +
-    '<rect x="37" y="49" width="6" height="5.5" rx="0.5" fill="#F5C542"/>' +
-    // Base platform (stepped)
-    '<path d="M32,68 H48 L51,72 H29 Z" fill="#1A1A1A"/>' +
-    '<path d="M26,72 H54 L57,76 H23 Z" fill="#1A1A1A"/>' +
-    // Rocky shore
-    '<path d="M18,76 Q24,74 30,76 Q36,74.5 40,76 Q44,74.5 50,76 Q56,74 62,76 L60,78 H20 Z" fill="#2C3E5A"/>' +
-    // Water reflection lines
-    '<line x1="24" y1="82" x2="56" y2="82" stroke="#D49035" stroke-width="1.5" opacity="0.45" stroke-linecap="round"/>' +
-    '<line x1="28" y1="85" x2="52" y2="85" stroke="#D49035" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>' +
-    '<line x1="33" y1="88" x2="47" y2="88" stroke="#D49035" stroke-width="1" opacity="0.18" stroke-linecap="round"/>' +
-    // Birds
-    '<path d="M15,34 Q18,31 21,34" stroke="#1A1A1A" stroke-width="1.1" fill="none" stroke-linecap="round"/>' +
-    '<path d="M58,30 Q61,27 64,30" stroke="#1A1A1A" stroke-width="1.1" fill="none" stroke-linecap="round"/>' +
-    '<path d="M10,46 Q13,43 16,46" stroke="#1A1A1A" stroke-width="0.9" fill="none" stroke-linecap="round"/>' +
-    '<path d="M63,42 Q66,39 69,42" stroke="#1A1A1A" stroke-width="0.9" fill="none" stroke-linecap="round"/>' +
-    '<path d="M13,56 Q15,54 17,56" stroke="#1A1A1A" stroke-width="0.8" fill="none" stroke-linecap="round"/>' +
-    '<path d="M64,54 Q66,52 68,54" stroke="#1A1A1A" stroke-width="0.8" fill="none" stroke-linecap="round"/>' +
-    '</svg>';
-
+// --- Logo Image (single source of truth) ---
+var LOGO_SRC = isHome ? 'assets/lighthouse-logo.png' : '../assets/lighthouse-logo.png';
+var LOGO_SVG = '<img src="' + LOGO_SRC + '" alt="Lighthouse Property Inspections, LLC logo" class="logo-icon logo-image">';
+   
   // --- Phone SVG icon ---
   var PHONE_SVG = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>';
 
