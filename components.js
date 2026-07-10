@@ -300,14 +300,14 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
             '</div>' +
             '<div class="footer-links">' +
               '<h4>Services</h4>' +
-                        <a href="' + linkPrefix + '#services">Residential Inspections</a>
+                        <a href="' + linkPrefix + '#services">Residential Home Inspections</a>
                         <a href="' + linkPrefix + '#services">WDO Inspections</a>
                         <a href="' + linkPrefix + '#services">Thermal Imaging</a>
                         <a href="' + linkPrefix + '#services">Radon Testing</a>
                         <a href="' + linkPrefix + '#services">Repair Verification</a>
                         <a href="' + linkPrefix + '#services">Return Inspections</a>
-                        <a href="' + linkPrefix + '#services">Chimney, Deck & Roof</a>
-                        <a href="' + linkPrefix + '#services">Plumbing, Electrical & HVAC</a>
+                        <a href="' + linkPrefix + '#services">New Construction Inspections</a>
+                        <a href="' + linkPrefix + '#services">11th Month Warranty Inspections</a>
             '</div>' +
             '<div class="footer-contact">' +
               '<h4>Contact</h4>' +
