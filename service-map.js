@@ -14,97 +14,15 @@ const ZOOM = 8;
   const GOLD_DIM = 'rgba(212, 168, 71, 0.35)';
   const NAVY = '#1B2A4A';
 
-  // Core service counties — approximate polygon boundaries [lat, lng]
-    // Core service counties — approximate polygon boundaries [lat, lng]
+   // Expanded Southwest Michigan service area — approximate visual boundary [lat, lng]
   const COUNTIES = [
     {
-      name: 'St. Joseph County',
+      name: 'Lighthouse Property Inspections Service Area',
       coords: [
-        [42.0710, -85.7930],
-        [42.0710, -85.2920],
-        [41.7590, -85.2920],
-        [41.7590, -85.7930]
-      ]
-    },
-    {
-      name: 'Cass County',
-      coords: [
-        [42.0710, -86.2240],
-        [42.0710, -85.7930],
-        [41.7590, -85.7930],
-        [41.7590, -86.2240]
-      ]
-    },
-    {
-      name: 'Kalamazoo County',
-      coords: [
-        [42.4230, -85.9960],
-        [42.4230, -85.3740],
-        [42.0710, -85.3740],
-        [42.0710, -85.9960]
-      ]
-    },
-    {
-      name: 'Allegan County',
-      coords: [
-        [42.7700, -86.2700],
-        [42.7700, -85.5400],
-        [42.4230, -85.5400],
-        [42.4230, -86.2700]
-      ]
-    },
-    {
-      name: 'Van Buren County',
-      coords: [
-        [42.4230, -86.3600],
-        [42.4230, -85.7600],
-        [42.0710, -85.7600],
-        [42.0710, -86.3600]
-      ]
-    },
-    {
-      name: 'Berrien County',
-      coords: [
-        [42.2440, -86.8250],
-        [42.2440, -86.2240],
-        [41.7590, -86.2240],
-        [41.7590, -86.8250]
-      ]
-    },
-    {
-      name: 'Branch County',
-      coords: [
-        [42.0710, -85.2920],
-        [42.0710, -84.8260],
-        [41.7590, -84.8260],
-        [41.7590, -85.2920]
-      ]
-    },
-    {
-      name: 'Calhoun County',
-      coords: [
-        [42.4230, -85.2920],
-        [42.4230, -84.7200],
-        [42.0710, -84.7200],
-        [42.0710, -85.2920]
-      ]
-    },
-    {
-      name: 'Eaton County',
-      coords: [
-        [42.7700, -85.3000],
+        [42.7700, -86.8250],
         [42.7700, -84.6000],
-        [42.4230, -84.6000],
-        [42.4230, -85.3000]
-      ]
-    },
-    {
-      name: 'Barry County',
-      coords: [
-        [42.7700, -85.5400],
-        [42.7700, -85.0700],
-        [42.4230, -85.0700],
-        [42.4230, -85.5400]
+        [41.7590, -84.6000],
+        [41.7590, -86.8250]
       ]
     }
   ];
