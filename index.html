@@ -607,31 +607,35 @@
     </div>
 </div>
           <div class="city-picker">
-            <label for="city-select">Find your city</label>
-            <select id="city-select" onchange="if(this.value)window.location.href=this.value">
-              <option value="">Select a city&hellip;</option>
-              <optgroup label="St. Joseph County">
-                <option value="service-areas/three-rivers-home-inspection.html">Three Rivers</option>
-                <option value="service-areas/sturgis-home-inspection.html">Sturgis</option>
-                <option value="service-areas/centreville-home-inspection.html">Centreville</option>
-                <option value="service-areas/constantine-home-inspection.html">Constantine</option>
-              </optgroup>
-              <optgroup label="Kalamazoo County">
-                <option value="service-areas/kalamazoo-home-inspection.html">Kalamazoo</option>
-                <option value="service-areas/portage-home-inspection.html">Portage</option>
-              </optgroup>
-              <optgroup label="Cass County">
-                <option value="service-areas/dowagiac-home-inspection.html">Dowagiac</option>
-              </optgroup>
-              <optgroup label="Branch County">
-                <option value="service-areas/coldwater-home-inspection.html">Coldwater</option>
-              </optgroup>
-              <optgroup label="Berrien County">
-                <option value="service-areas/niles-home-inspection.html">Niles</option>
-              </optgroup>
-            </select>
-          </div>
-        </div>
+    <label for="city-select">Find an available city page</label>
+    <select id="city-select" onchange="if(this.value) window.location.href=this.value">
+        <option value="">Select a city page...</option>
+
+        <optgroup label="St. Joseph County">
+            <option value="service-areas/three-rivers-home-inspection.html">Three Rivers</option>
+            <option value="service-areas/sturgis-home-inspection.html">Sturgis</option>
+            <option value="service-areas/centreville-home-inspection.html">Centreville</option>
+            <option value="service-areas/constantine-home-inspection.html">Constantine</option>
+        </optgroup>
+
+        <optgroup label="Kalamazoo County">
+            <option value="service-areas/kalamazoo-home-inspection.html">Kalamazoo</option>
+            <option value="service-areas/portage-home-inspection.html">Portage</option>
+        </optgroup>
+
+        <optgroup label="Cass County">
+            <option value="service-areas/dowagiac-home-inspection.html">Dowagiac</option>
+        </optgroup>
+
+        <optgroup label="Branch County">
+            <option value="service-areas/coldwater-home-inspection.html">Coldwater</option>
+        </optgroup>
+
+        <optgroup label="Berrien County">
+            <option value="service-areas/niles-home-inspection.html">Niles</option>
+        </optgroup>
+    </select>
+</div>
         <div class="area-map">
           <div id="service-area-map" class="service-area-map"></div>
         </div>
