@@ -2073,3 +2073,17 @@ grid-template-columns: 1fr;
         grid-template-columns: 1fr;
     }
 }
+
+/* Sample Reports Text Color Fix */
+.sample-reports-section .section-header h2 {
+color: #1B2A4A;
+}
+
+.sample-reports-section .section-header .section-desc,
+.sample-reports-section .section-header p:not(.section-label) {
+color: #4b5563;
+}
+
+.sample-reports-section .section-label {
+color: #D4A847;
+}
