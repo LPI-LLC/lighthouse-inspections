@@ -27,7 +27,6 @@ const ZOOM = 8;
     }
   ];
 
-  // Cities with geolocation — slug links to landing pages where available
    // Cities with geolocation — slug links to landing pages where available
   var CITIES = [
     { name: 'Three Rivers', lat: 41.9442, lng: -85.6322, hq: true, slug: 'three-rivers' },
