@@ -2096,3 +2096,17 @@ color: #D4A847;
     display: block;
     border-radius: 4px;
 }
+
+/* Expanded Service Area Layout */
+#service-area .area-grid {
+    align-items: flex-start;
+}
+
+#service-area .area-map-container {
+    position: sticky;
+    top: 110px;
+}
+
+#service-area #service-area-map {
+    min-height: 520px;
+}
