@@ -1,29 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://www.lighthouse-inspections.com/</loc>
-    <lastmod>2026-04-03</lastmod>
-  </url>
+    <url>
+        <loc>https://www.lighthouse-inspections.com/</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
 
-  <url>
-    <loc>https://www.lighthouse-inspections.com/service-areas/three-rivers-home-inspection.html</loc>
-    <lastmod>2026-04-03</lastmod>
-  </url>
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/three-rivers-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
 
-  <url>
-    <loc>https://www.lighthouse-inspections.com/service-areas/portage-home-inspection.html</loc>
-    <lastmod>2026-04-03</lastmod>
-  </url>
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/sturgis-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
 
-  <url>
-    <loc>https://www.lighthouse-inspections.com/service-areas/sturgis-home-inspection.html</loc>
-    <lastmod>2026-04-03</lastmod>
-  </url>
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/centreville-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
 
-  <url>
-    <loc>https://www.lighthouse-inspections.com/service-areas/kalamazoo-home-inspection.html</loc>
-    <lastmod>2026-04-03</lastmod>
-  </url>
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/constantine-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/kalamazoo-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/portage-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/dowagiac-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/coldwater-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
+
+    <url>
+        <loc>https://www.lighthouse-inspections.com/service-areas/niles-home-inspection.html</loc>
+        <lastmod>2026-07-10</lastmod>
+    </url>
 
 </urlset>
