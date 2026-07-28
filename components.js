@@ -50,7 +50,7 @@ var LOGO_SVG = '<img src="' + LOGO_SRC + '" alt="Lighthouse Property Inspections
     {
 svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="currentColor"/><path d="M24 20V10M27.5 26L36 31M20.5 26L12 31" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M18 14C15 16 13 19 13 23M30 14C33 16 35 19 35 23M17 34C21 37 27 37 31 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
 title: 'Radon Testing',
-desc: 'Professional 48-hour continuous radon testing with separate placement and retrieval appointments. Includes monitor placement, retrieval, data analysis, and a detailed digital report following applicable NRPP measurement protocols.'
+desc: 'Professional continuous radon testing using calibrated monitoring equipment. Includes monitor placement, retrieval, data analysis, and a detailed digital report following applicable testing standards and manufacturer instructions.'
 },
 {
 svg: '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="8" width="28" height="34" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M18 8V6H30V8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M17 25L22 30L32 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 36H31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
