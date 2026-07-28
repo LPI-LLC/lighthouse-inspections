@@ -312,7 +312,7 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +
-            '<p>&copy; 2026 Lighthouse Property Inspections, LLC. All rights reserved. <a href="' + (isHome ? 'admin.html' : '../admin.html') + '" class="admin-link">Admin</a></p>' +
+            '<p>&copy; 2026 Lighthouse Property Inspections, LLC. All rights reserved.</p>'
             '<p class="footer-inter">InterNACHI&reg; Certified Professional Inspector</p>' +
           '</div>' +
         '</div>' +
