@@ -85,7 +85,6 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
   document.addEventListener('DOMContentLoaded', function () {
     injectAnalytics();
     injectNav();
-    injectStormBanner();
     injectServices();
     injectContact();
     injectFooter();
