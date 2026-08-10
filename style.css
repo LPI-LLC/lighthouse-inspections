@@ -1937,11 +1937,6 @@ grid-template-columns: repeat(3, 1fr);
 gap: 1.25rem;
 }
 
-@media (min-width: 901px) {
-    .testimonial-grid .testimonial-card:last-child {
-        grid-column: 2;
-    }
-}
 
 .testimonial-card {
 background: rgba(255, 255, 255, 0.055);
