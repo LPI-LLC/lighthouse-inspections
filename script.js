@@ -3,30 +3,6 @@
    Interactive Scripts
    ========================================= */
 
-// --- Storm banner dismiss (global, outside DOMContentLoaded) ---
-function updateBannerOffset() {
-  var banner = document.getElementById('storm-banner');
-  var navbar = document.getElementById('navbar');
-  if (!navbar) return;
-  if (banner && !banner.classList.contains('hidden')) {
-    var h = banner.offsetHeight;
-    navbar.style.top = h + 'px';
-    document.body.style.paddingTop = h + 'px';
-  } else {
-    navbar.style.top = '0';
-    document.body.style.paddingTop = '0';
-  }
-}
-
-function dismissStormBanner() {
-  var banner = document.getElementById('storm-banner');
-  if (banner) {
-    banner.classList.add('hidden');
-    try { localStorage.setItem('lpi-storm-banner-dismissed', '1'); } catch(e) {}
-    updateBannerOffset();
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // --- Navbar scroll effect ---
@@ -43,10 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
-
-  // --- Storm banner offset ---
-  updateBannerOffset();
-  window.addEventListener('resize', updateBannerOffset);
 
   // --- Mobile nav toggle ---
   const navToggle = document.querySelector('.nav-toggle');
