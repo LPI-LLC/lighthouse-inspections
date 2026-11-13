@@ -7,11 +7,9 @@
 
   // Replace this placeholder with your CARTO Basemaps key before merging.
   // This key is visible in the browser, so restrict it to your website in CARTO.
-  const CARTO_BASEMAPS_KEY = '// raster
-https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=YOUR_KEY
-
-// vector
-https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json?key=YOUR_KEY';
+  // Paste ONLY the issued key between these quotes, not the sample tile URLs.
+  // A blank value uses OpenStreetMap tiles until CARTO is configured.
+  const CARTO_BASEMAPS_KEY = '';
 
  // Southwest Michigan service area map center
 const CENTER = [42.25, -85.70];
@@ -154,16 +152,23 @@ const ZOOM = 8;
       touchZoom: true
     });
 
-    // CARTO Positron tiles (API key required since September 2026)
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=' + encodeURIComponent(CARTO_BASEMAPS_KEY), {
+    // Use the CARTO light style when a key is configured. Otherwise keep the
+    // service-area map functional using standard OpenStreetMap tiles.
+    const hasCartoKey = CARTO_BASEMAPS_KEY.trim().length > 0;
+    const tileUrl = hasCartoKey
+      ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=' + encodeURIComponent(CARTO_BASEMAPS_KEY.trim())
+      : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+    L.tileLayer(tileUrl, {
       maxZoom: 14,
       minZoom: 7,
-      subdomains: 'abcd'
+      subdomains: hasCartoKey ? 'abcd' : ''
     }).addTo(map);
 
-    // CARTO requires visible attribution to both OpenStreetMap and CARTO.
+    const osmCredit = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    const cartoCredit = ', &copy; <a href="https://carto.com/attribution/">CARTO</a>';
     L.control.attribution({ position: 'bottomright', prefix: false })
-      .addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution/">CARTO</a>')
+      .addAttribution(osmCredit + (hasCartoKey ? cartoCredit : ''))
       .addTo(map);
 
     // County boundaries
