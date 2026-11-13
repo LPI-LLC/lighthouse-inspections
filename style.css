@@ -2111,3 +2111,47 @@ color: #D4A847;
 #service-area #service-area-map {
     min-height: 520px;
 }
+
+/* Crawlable city links beneath the service area layout */
+#service-area .service-city-links {
+  margin-top: 28px;
+  padding: 24px;
+  background: rgba(13, 27, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+}
+#service-area .service-city-links h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--white);
+  margin: 0 0 16px;
+}
+#service-area .service-city-links-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px 18px;
+}
+#service-area .service-city-links a {
+  display: block;
+  padding: 8px 10px;
+  color: var(--gold-500);
+  font-size: 0.88rem;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+#service-area .service-city-links a:hover,
+#service-area .service-city-links a:focus-visible {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.07);
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  #service-area .service-city-links-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 540px) {
+  #service-area .service-city-links { padding: 18px; }
+  #service-area .service-city-links-list { grid-template-columns: 1fr; }
+}
