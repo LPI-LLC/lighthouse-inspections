@@ -7,7 +7,11 @@
 
   // Replace this placeholder with your CARTO Basemaps key before merging.
   // This key is visible in the browser, so restrict it to your website in CARTO.
-  const CARTO_BASEMAPS_KEY = 'PASTE_CARTO_KEY_HERE';
+  const CARTO_BASEMAPS_KEY = '// raster
+https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=YOUR_KEY
+
+// vector
+https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json?key=YOUR_KEY';
 
  // Southwest Michigan service area map center
 const CENTER = [42.25, -85.70];
