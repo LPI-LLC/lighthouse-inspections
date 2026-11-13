@@ -1888,3 +1888,58 @@ color: #D4A847;
   #service-area .service-city-links { padding: 18px; }
   #service-area .service-city-links-list { grid-template-columns: 1fr; }
 }
+
+/* Useful guidance sections on individual home inspection city pages */
+.city-buyer-guide {
+  background: var(--navy-900);
+  padding: 76px 0;
+}
+.city-buyer-guide .section-header {
+  max-width: 900px;
+  margin-bottom: 28px;
+}
+.city-buyer-guide .section-header > p:not(.section-label) {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.city-buyer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.city-buyer-card {
+  padding: 24px;
+  background: var(--navy-800);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: var(--radius-md);
+}
+.city-buyer-card h3 {
+  color: var(--gold-400);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.city-buyer-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.city-buyer-note {
+  margin-top: 22px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.city-buyer-note a {
+  color: var(--gold-400);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.city-buyer-note a:hover,
+.city-buyer-note a:focus-visible {
+  color: var(--white);
+}
+@media (max-width: 900px) {
+  .city-buyer-grid { grid-template-columns: 1fr; }
+  .city-buyer-guide { padding: 56px 0; }
+}
