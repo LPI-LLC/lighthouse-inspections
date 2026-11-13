@@ -64,10 +64,6 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
     }
   ];
 
-  // --- Storm banner: check if previously dismissed ---
-  var bannerDismissed = false;
-  try { bannerDismissed = localStorage.getItem('lpi-storm-banner-dismissed') === '1'; } catch (e) {}
-
   // --- Google Analytics 4 ---
   function injectAnalytics() {
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return;
@@ -120,24 +116,6 @@ desc: 'Focused verification of listed repairs, contractor repair lists, lender-r
           '</ul>' +
         '</div>' +
       '</nav>';
-  }
-
-  // --- Storm Banner ---
-  function injectStormBanner() {
-    var el = document.getElementById('storm-banner-placeholder');
-    if (!el) return;
-
-    var href = el.getAttribute('data-banner-href') || (isHome ? 'service-areas/three-rivers-home-inspection.html' : 'three-rivers-home-inspection.html');
-    var hiddenClass = bannerDismissed ? ' hidden' : '';
-
-    el.outerHTML =
-      '<div class="storm-banner' + hiddenClass + '" id="storm-banner">' +
-        '<a href="' + href + '" class="storm-banner-link">' +
-          '<span class="storm-banner-icon">&#9888;&#65039;</span>' +
-          '<span class="storm-banner-text"><strong>Our hearts are with Three Rivers.</strong> Free post-storm assessments for affected neighbors. <span class="storm-banner-arrow">&rarr;</span></span>' +
-        '</a>' +
-        '<button class="storm-banner-close" aria-label="Dismiss banner" onclick="dismissStormBanner()">&times;</button>' +
-      '</div>';
   }
 
   // --- Services Section ---
