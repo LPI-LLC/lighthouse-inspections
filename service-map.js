@@ -1,9 +1,17 @@
 /**
  * Service Area Map Component
- * Leaflet.js + CartoDB Dark Tiles — no API key required
+ * Leaflet.js + CARTO Positron tiles — a website-restricted API key is required
  */
 (function () {
   'use strict';
+
+  // Replace this placeholder with your CARTO Basemaps key before merging.
+  // This key is visible in the browser, so restrict it to your website in CARTO.
+  const CARTO_BASEMAPS_KEY = '// raster
+https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=YOUR_KEY
+
+// vector
+https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json?key=YOUR_KEY';
 
  // Southwest Michigan service area map center
 const CENTER = [42.25, -85.70];
@@ -146,15 +154,16 @@ const ZOOM = 8;
       touchZoom: true
     });
 
-    // CartoDB light tiles — free, no API key
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    // CARTO Positron tiles (API key required since September 2026)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=' + encodeURIComponent(CARTO_BASEMAPS_KEY), {
       maxZoom: 14,
-      minZoom: 7
+      minZoom: 7,
+      subdomains: 'abcd'
     }).addTo(map);
 
-    // Minimal attribution
+    // CARTO requires visible attribution to both OpenStreetMap and CARTO.
     L.control.attribution({ position: 'bottomright', prefix: false })
-      .addAttribution('&copy; <a href="https://carto.com" style="color:#3B5278">CARTO</a>')
+      .addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution/">CARTO</a>')
       .addTo(map);
 
     // County boundaries
